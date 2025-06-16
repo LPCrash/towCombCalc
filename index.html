@@ -1,24 +1,49 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title id="title">Brutto-Netto-Rechner</title>
+  <title id="title">TOW Combat Result Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body onload="setLanguage('de')">
-  <h1 id="title">Brutto-Netto-Rechner</h1>
+<body onload="setLanguage('en')">
+  <h1 id="title">TOW Combat Result Calculator</h1>
 
-  <label for="brutto">Bruttobetrag (€):</label>
-  <input type="number" id="brutto">
+  <label for="wounds">Unsaved wounds inflicted:</label>
+  <input type="number" id="wounds">
 
-  <label for="steuersatz">Steuersatz (%):</label>
-  <input type="number" id="steuersatz" value="19">
+  <label for="closeOrder">Close Order:</label>
+  <input type="checkbox" id="closeOrder">
 
-  <button onclick="berechne()">Berechnen</button>
-  <select onchange="setLanguage(this.value)">
+  <label for="ranks">Full Ranks behind Fighting Rank</label>
+  <input type="number" id="ranks" value="1">
+
+  <label for="closeOrder">Standard:</label>
+  <input type="checkbox" id="Standard">
+
+  <label for="BattleStandard">Battle Standard:</label>
+  <input type="checkbox" id="BattleStandard">
+
+  <label for="flankAttack">Flank Attack:</label>
+  <input type="checkbox" id="flankAttack">
+
+  <label for="rearAttack">Rear Attack:</label>
+  <input type="checkbox" id="rearAttack">
+
+  <label for="highGround">High Ground:</label>
+  <input type="checkbox" id="highGround">
+
+  <label for="overkill">Overkill:</label>
+  <input type="number" id="overkill">
+
+  <label for="other">Others:</label>
+  <input type="number" id="other">
+
+
+  <button onclick="calcCombatResult()">Calculate Combat Result Score</button>
+  <!--<select onchange="setLanguage(this.value)">
     <option value="de">Deutsch</option>
     <option value="en">English</option>
-  </select>
+  </select>-->
 
   <pre id="result"></pre>
 
