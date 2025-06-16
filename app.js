@@ -1,16 +1,24 @@
-function berechne() {
-  const brutto = parseFloat(document.getElementById('brutto').value);
-  const steuersatz = parseFloat(document.getElementById('steuersatz').value);
+function calcCombatResult() {
+  const wounds = parseFloat(document.getElementById('wounds').value);
+  const closeOrder = parseFloat(document.getElementById('closeOrder').value);
+  const ranks = parseFloat(document.getElementById('ranks').value);
+  const Standard = parseFloat(document.getElementById('Standard').value);
+  const BattleStandard = parseFloat(document.getElementById('BattleStandard').value);
+  const flankAttack = parseFloat(document.getElementById('flankAttack').value);
+  const rearAttack = parseFloat(document.getElementById('rearAttack').value);
+  const highGround = parseFloat(document.getElementById('highGround').value);
+  const overkill = parseFloat(document.getElementById('overkill').value);
+  const other = parseFloat(document.getElementById('other').value);
 
-  if (isNaN(brutto) || isNaN(steuersatz)) {
+  
+  //if (isNaN(wounds) || isNaN(steuersatz)) {
+  if (isNaN(wounds))
     document.getElementById('result').innerText = 'Ungültige Eingabe.';
     return;
   }
 
-  const netto = brutto / (1 + steuersatz / 100);
-  const steuer = brutto - netto;
-  const t = translations[currentLang];
+  const result = wounds + closeOrder + ranks;
 
   document.getElementById('result').innerText = 
-    `${t.resultNet}: ${netto.toFixed(2)} €\n${t.resultTax}: ${steuer.toFixed(2)} €`;
+    `${'Combat Result': ${result.toFixed(0)};
 }
