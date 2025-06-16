@@ -17,7 +17,7 @@ function calcCombatResult() {
     return;
   }
 
-  const result = wounds + closeOrder + ranks;
+  const result = wounds + ranks;
 
   document.getElementById('result').innerText = 
     `${'Combat Result': ${result.toFixed(0)};
