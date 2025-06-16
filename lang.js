@@ -1,6 +1,6 @@
 const translations = {
   de: {
-    title: "Brutto-Netto-Rechner",
+    title: "Kampfergebnisrechner",
     labelAmount: "Bruttobetrag (€):",
     labelTax: "Steuersatz (%):",
     button: "Berechnen",
@@ -17,13 +17,13 @@ const translations = {
   }
 };
 
-let currentLang = "de";
+//let currentLang = "de";
 
-function setLanguage(lang) {
+/*function setLanguage(lang) {
   currentLang = lang;
   const t = translations[lang];
   document.getElementById("title").innerText = t.title;
   document.querySelector("label[for='brutto']").innerText = t.labelAmount;
   document.querySelector("label[for='steuersatz']").innerText = t.labelTax;
-  document.querySelector("button").innerText = t.button;
+  document.querySelector("button").innerText = t.button;*/
 }
